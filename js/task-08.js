@@ -14,10 +14,11 @@ function handleSubmit(event) {
     return alert("Заповніть поля");
   }
 
-  const info = {
-    email: email.value,
-    password: password.value,
+  const data = {
+    [email.name]: email.value,
+    [password.name]: password.value,
   };
-  console.log(info);
+  console.log(data);
+
   event.currentTarget.reset();
 };
