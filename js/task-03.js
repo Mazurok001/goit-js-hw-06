@@ -15,7 +15,7 @@ const images = [
 
 const imgList = document.querySelector('.gallery');
 
-images.forEach(({ url, alt }) => { imgList.insertAdjacentHTML('afterbegin', `<li><img src='${url}' alt='${alt}'/></li>`) })
+const qw = images.map(({ url, alt }) => { imgList.insertAdjacentHTML('afterbegin', `<li><img src='${url}' alt='${alt}'/></li>`) }).join('');
 
 imgList.classList.add("gallery_task3");
 
